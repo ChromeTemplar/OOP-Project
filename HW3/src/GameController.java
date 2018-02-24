@@ -7,10 +7,8 @@ public class GameController {
 	
 	public void getInput() {
 		
-		System.out.println("Enter your command: ");
-		Scanner input = new Scanner (System.in);
-		String userInput = input.nextLine();
-		inputCheck (userInput);
+
+		//inputCheck (userInput);
 		loopCheck (userInput);
 		input.close();
 		
@@ -30,10 +28,12 @@ public class GameController {
 	}
 	
 	public void loopCheck (String loopString) {
-		
-		while (loopString != "quit") {
-			
-			getInput();
+		String userInput = "lemon";
+		while (userInput != "quit") {
+			System.out.println("Enter your command: ");
+			Scanner input = new Scanner (System.in);
+			userInput = input.nextLine();
+			inputCheck(userInput);
 		}
 	}
 	
